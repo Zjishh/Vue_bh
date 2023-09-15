@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <!-- 展示区，对逻辑区的内容，进行前端页面展示 -->
+  <div id="app7">
+    <button @click="clickfn()">点击测试</button>
+
+  </div>
+  <!-- 逻辑区 -->
+  <script>
+    var flag = true;
+    var timerId;
+    function clickone(callback, time) {
+      if (flag == true) {
+        callback();
+        flag = false;
+      } else {
+        return;
+      }
+      if (timerId) { // 如果已经存在定时器，则清除之前的定时器
+        clearTimeout(timerId);
+      }
+      timerId = setTimeout(() => { // 创建新的定时器
+        flag = true;
+      }, time);
+
+    }
+    const app = {
+      // 数据存放位置（数据区）
+      data() {
+        return {
+
+        }
+      },
+      // 方法函数存放位置（方法区）
+      methods: {
+
+        clickfn() {
+          clickone(() => { console.log(Date()) }, 3000);
+
+        }
+      },
+      //计算属性（对数据进行保存，兼顾数据处理功能）
+      computed: {
+
+      },
+      //侦听器（对数据区的数据进行监听）
+      watch: {
+
+      }
+
+    }
+    //Vue3实例化并且挂载，注意app7，挂载在页面指定位置
+    Vue.createApp(app).mount("#app7");
+  </script>
+</body>
+
+</html>

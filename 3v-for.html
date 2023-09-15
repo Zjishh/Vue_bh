@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <!-- 展示区 -->
+    <div id="d">
+        <ul>
+            <li v-for="(a,index) in arrt" :key="a">{{a.name}}</li>
+        </ul>
+        <form action="" @submit.prevent()="addplus()">
+            <input type="button" value="dianji" name="" id="" @Click="dianji()">
+        </form>
+    </div>
+    <!-- 逻辑区 -->
+    <script>
+        const app = {
+            data() {
+                return {
+                    arrt: [
+                        {
+                            name: "aaa",
+                            age: 16
+                        },
+                        {
+                            name: "bbb",
+                            age: 316
+                        },
+                        {
+                            name: "ccc",
+                            age: 165
+                        }
+                    ],
+                    task:""
+                }
+            },
+            methods: {
+                addplus(){
+                                this.arrt.push(this.task);
+                }
+            },
+        }
+        Vue.createApp(app).mount("#d");  
+    </script>
+</body>
+
+</html>

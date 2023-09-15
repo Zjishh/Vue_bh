@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>技术按钮
+            <span id="jishu">0</span>
+        </h1>
+        <button onclick="add()">按钮</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var a = 0;
+    function add() {
+            document.getElementById("jishu").innerText = 'ss${++a}';
+
+    }
+</script>

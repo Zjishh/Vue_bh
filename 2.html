@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="q3">
+        {{name}}
+        <button v-on:click="addd()">增加</button>
+    </div>
+
+    <script>
+        const App123 = {
+            data() {
+                return {
+                    name: 1223,
+                    class: "binhai"
+                }
+            },
+            methods: {
+                addd() {
+
+
+                    setInterval(() => {
+                        
+                    }, 1000)
+                }
+            },
+        }
+        Vue.createApp(App123).mount("#q3");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+// <!DOCTYPE html>
+// <html lang="en">
+
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <script src="vue.js"></script>
+// </head>
+
+// <body>
+//     <!-- 展示区 -->
+//     <div id="d">
+
+//     </div>
+//     <!-- 逻辑区 -->
+//     <script>
+//         const app = {
+//             data() {
+//                 return {
+                    
+//                 }
+//             },
+//             methods: {
+                
+//             },
+//         }
+//         Vue.createApp().mount("#d");
+//     </script>
+// </body>
+
+// </html>
